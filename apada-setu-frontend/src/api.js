@@ -57,8 +57,7 @@ export const UNIVERSITIES = {
 
 export const STAGES = ["Submitted", "AI Classified", "Govt. Validated", "University Matched", "In Progress", "Resolved"];
 
-const API_BASE = "http://localhost:4000";
-
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:4000";
 let seed = [
   { id: "APS-1042", title: "Severe waterlogging near Rajendra Nagar market, drainage blocked for 3 days", category: "Flood", priority: "High", status: 3, location: "Patna, Bihar", district: "Patna", state: "Bihar", severity: "High", expectedImpact: "~2,000 residents affected", duplicate: false },
   { id: "APS-1041", title: "Cracks widening on hillside road after monsoon, landslide risk to nearby homes", category: "Landslide", priority: "High", status: 4, location: "Shimla, HP", district: "Shimla", state: "Himachal Pradesh", severity: "High", expectedImpact: "40 homes at risk", duplicate: false },
